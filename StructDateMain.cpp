@@ -4,14 +4,23 @@ using namespace std;
 
 struct Day {
     int value;
+    explicit Day(int new_value) { // добавил exlicit конструктор, в Date date = Date(Day(10), Month(11), Year(12)) // или Date(Day{10}, Month{11}, Year{12})
+        value = new_value;
+    }
 };
 
 struct Month {
     int value;
+    explicit Month(int new_value) {
+        value = new_value;
+    }
 };
 
 struct Year {
     int value;
+    explicit Year(int new_value) {
+        value = new_value;
+    }
 };
 
 struct Date {
